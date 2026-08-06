@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -1342,6 +1342,67 @@ section{padding:124px 0}
   }
 }
 
+
+/* V13 seed announcement and persistent navigation CTA */
+.nav-demo-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  padding:0 20px;
+  margin-left:10px;
+  border-radius:6px;
+  background:#1A1A1A;
+  color:#FAFAFA !important;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 8px 20px rgba(26,26,26,.10);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.nav-demo-btn:hover{
+  transform:translateY(-1px);
+  box-shadow:0 10px 24px rgba(26,26,26,.14);
+}
+.seed-announcement{
+  width:max-content;
+  max-width:100%;
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  margin:0 0 24px;
+  padding:9px 14px;
+  border:1px solid #D9D9DC;
+  border-radius:999px;
+  background:#F2F2F2;
+  color:#1A1A1A;
+  font-size:13px;
+  font-weight:600;
+  text-decoration:none;
+  box-shadow:0 6px 18px rgba(26,26,26,.05);
+}
+.seed-announcement b{
+  color:#1A1A1A;
+  font-size:16px;
+  line-height:1;
+}
+.seed-announcement:hover{
+  border-color:#6B2C91;
+}
+@media(max-width:880px){
+  .nav-demo-btn{
+    min-height:40px;
+    padding:0 15px;
+    margin-left:0;
+  }
+}
+@media(max-width:640px){
+  .seed-announcement{
+    font-size:12px;
+    gap:9px;
+    padding:8px 12px;
+  }
+}
+
 </style>
 <!-- Brand system applied:
 Inter for functional copy; Crimson Pro Medium for section titles.
@@ -1353,9 +1414,14 @@ Yellow remains a restrained verification signal only. -->
 <header class="nav"><div class="shell navin"><a class="brand" href="#top" aria-label="Cellbyte home">
 <img class="brand-wordmark light-asset" src="assets/cellbyte-wordmark-black.png" alt="Cellbyte">
 <img class="brand-wordmark dark-asset" src="assets/cellbyte-wordmark-white.png" alt="Cellbyte">
-</a><nav class="navlinks"><a href="#platform">Platform</a><a href="#usecases">Use Cases</a><a href="#security">Security</a><a href="#careers">Careers</a><a href="#about">About</a></nav></div></header>
+</a><nav class="navlinks"><a href="#platform">Platform</a><a href="#usecases">Use Cases</a><a href="#security">Security</a><a href="#careers">Careers</a><a href="#about">About</a><a class="nav-demo-btn" href="#closing">Book a demo</a></nav></div></header>
 <main id="top">
-<div class="shell hero"><div><div class="eyebrow">Agentic Pricing & Market Access Intelligence</div><h1>AI Agents for <span class="accent">Pharmaceutical</span> Drug Launches</h1><p class="lead">Orchestrate fragmented evidence, workflows, and expertise into one verified launch decision.</p><p class="support">Pricing and Market Access professionals use Cellbyte to move from research to source-linked answers in seconds instead of weeks.</p><div class="ctas"><a class="btn primary" href="#closing">Book a demo</a><a class="btn secondary" href="#platform">Explore the platform</a></div><div class="query"><div class="kicker">Example query</div><div class="q">How have reimbursement outcomes evolved for comparable oncology treatments across Germany, France, and Italy?</div><div class="states"><div class="state">Sources retrieved</div><div class="state">Evidence extracted</div><div class="state">Analogues compared</div><div class="state">Human review</div><div class="state verified">Validated</div><div class="state verified">✓ Verified</div></div></div></div><div class="art" aria-label="Fluid agentic intelligence core with orbital evidence pathways">
+<div class="shell hero"><div>
+<a class="seed-announcement" href="#company-news" aria-label="Read about Cellbyte's 2.75 million dollar seed round">
+  <span>Announcing our $2.75M Seed Round</span>
+  <b aria-hidden="true">→</b>
+</a>
+<div class="eyebrow">Agentic Pricing & Market Access Intelligence</div><h1>AI Agents for <span class="accent">Pharmaceutical</span> Drug Launches</h1><p class="lead">Orchestrate fragmented evidence, workflows, and expertise into one verified launch decision.</p><p class="support">Pricing and Market Access professionals use Cellbyte to move from research to source-linked answers in seconds instead of weeks.</p><div class="ctas"><a class="btn primary" href="#closing">Book a demo</a><a class="btn secondary" href="#platform">Explore the platform</a></div><div class="query"><div class="kicker">Example query</div><div class="q">How have reimbursement outcomes evolved for comparable oncology treatments across Germany, France, and Italy?</div><div class="states"><div class="state">Sources retrieved</div><div class="state">Evidence extracted</div><div class="state">Analogues compared</div><div class="state">Human review</div><div class="state verified">Validated</div><div class="state verified">✓ Verified</div></div></div></div><div class="art" aria-label="Fluid agentic intelligence core with orbital evidence pathways">
   <div class="fluid-intelligence-stage">
     <div class="stage-glow"></div>
 
