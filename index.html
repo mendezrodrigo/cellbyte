@@ -1531,6 +1531,183 @@ section{
   }
 }
 
+
+/* V15 final submission refinements */
+.btn.primary,.nav-demo-btn,.closing .btn.primary{
+  background:#1A1A1A !important;
+  border-color:#1A1A1A !important;
+  color:#FAFAFA !important;
+  box-shadow:none !important;
+}
+.btn.primary:hover,.nav-demo-btn:hover,.closing .btn.primary:hover{
+  background:#2C2C2E !important;
+  border-color:#2C2C2E !important;
+}
+.secondary,.accent,.kicker,.eyebrow,.platform-verified-output,.integration-output,.verifiedpill{
+  color:#6B2C91 !important;
+}
+
+/* Exact node-to-node Agentic Workflow geometry */
+.final-agentic-flow{
+  position:relative;
+  min-height:250px;
+  padding:0;
+  overflow:hidden;
+  background:#FAFAFA;
+}
+.final-agentic-lines{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  z-index:0;
+}
+.agent-line{fill:none;stroke-width:3;stroke-linecap:round}
+.agent-line-black{stroke:#1A1A1A}
+.agent-line-purple{stroke:#6B2C91}
+.agent-junction{stroke:#FAFAFA;stroke-width:2}
+.black-junction{fill:#1A1A1A}
+.purple-junction{fill:#6B2C91}
+.final-agent-node{
+  position:absolute;
+  top:50%;
+  transform:translate(-50%,-50%);
+  z-index:2;
+  width:120px;
+  min-height:82px;
+  padding:12px 10px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  border:1px solid #D8D8DC;
+  border-radius:14px;
+  background:#FAFAFA;
+  text-align:center;
+  box-shadow:0 8px 20px rgba(26,26,26,.05);
+}
+.final-agent-node b{
+  width:27px;height:27px;display:grid;place-items:center;border-radius:50%;
+  background:#F0F0F1;color:#1A1A1A;font-size:11px;
+}
+.final-agent-node span{font-size:10px;line-height:1.3;font-weight:700;color:#1A1A1A}
+.final-query{left:10%;background:#1A1A1A;border-color:#1A1A1A}
+.final-query b{background:#FAFAFA;color:#1A1A1A}
+.final-query span{color:#FAFAFA}
+.final-retrieve{left:30%}
+.final-compare{left:50%}
+.final-human{left:70%}
+.final-verified{left:90%;border:2px solid #6B2C91}
+.final-verified b{background:#6B2C91;color:#FAFAFA}
+.final-verified span{color:#6B2C91}
+
+/* More compact Data Vault */
+.intuitive-vault-visual{min-height:250px !important}
+.vault-doc{width:110px !important;padding:8px 9px !important;border-radius:9px !important}
+.vault-doc b{min-width:32px !important;height:21px !important;font-size:7px !important}
+.vault-doc span{margin-top:5px !important;font-size:9px !important}
+.vault-doc-pdf{left:22px !important;top:28px !important}
+.vault-doc-doc{left:22px !important;bottom:40px !important}
+.vault-doc-xls{right:22px !important;top:28px !important}
+.vault-doc-ppt{right:22px !important;bottom:40px !important}
+.vault-safe{width:82px !important;height:82px !important;border-radius:16px !important}
+.vault-safe img{width:32px !important;height:24px !important}
+.vault-safe small{margin-top:30px;font-size:8px !important}
+.vault-ring{display:none !important}
+.vault-caption{bottom:8px !important;padding:6px 9px !important}
+
+/* Footer official identity */
+.footer-brand-block{display:flex;flex-direction:column;align-items:flex-start}
+.footer-wordmark{display:block;width:138px;height:auto;object-fit:contain}
+.footer-brand-block .support{margin-top:14px;margin-bottom:0}
+
+@media(max-width:900px){
+  .final-agentic-flow{min-height:520px;display:grid;gap:10px;padding:18px}
+  .final-agentic-lines{display:none}
+  .final-agent-node{
+    position:relative;left:auto !important;top:auto;transform:none;
+    width:100%;min-height:66px;flex-direction:row;justify-content:flex-start;text-align:left;
+  }
+}
+
+
+/* V16 final polish */
+
+/* Prevent the seed-round announcement from being clipped beneath the fixed header. */
+body{
+  padding-top:72px !important;
+}
+.hero{
+  min-height:calc(100vh - 72px) !important;
+  padding-top:82px !important;
+  padding-bottom:72px !important;
+  overflow:visible !important;
+}
+.hero > div:first-child{
+  padding-top:8px;
+}
+.seed-announcement{
+  position:relative !important;
+  z-index:3 !important;
+  margin-top:0 !important;
+  margin-bottom:20px !important;
+  transform:none !important;
+}
+.hero .eyebrow{
+  margin-top:0 !important;
+  margin-bottom:20px !important;
+}
+.hero h1{
+  margin-top:0 !important;
+}
+.lead{
+  margin-top:30px !important;
+}
+.support{
+  margin-top:17px !important;
+}
+.ctas{
+  margin-top:34px !important;
+}
+.query{
+  margin-top:64px !important;
+}
+
+/* Center the Cellbyte logo inside the Secure Merge box. */
+.vault-safe{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:8px !important;
+}
+.vault-safe img{
+  position:static !important;
+  display:block !important;
+  margin:0 !important;
+  transform:none !important;
+}
+.vault-safe small{
+  position:static !important;
+  margin:0 !important;
+  line-height:1 !important;
+}
+
+@media(max-width:860px){
+  body{
+    padding-top:68px !important;
+  }
+  .hero{
+    min-height:auto !important;
+    padding-top:58px !important;
+    padding-bottom:64px !important;
+  }
+  .hero > div:first-child{
+    padding-top:0;
+  }
+}
+
 </style>
 <!-- Brand system applied:
 Inter for functional copy; Crimson Pro Medium for section titles.
@@ -1700,38 +1877,22 @@ Yellow remains a restrained verification signal only. -->
           <div><div class="kicker">Orchestrate</div><h3>Agentic Workflows</h3></div>
         </div>
         <p>Human-in-the-loop agents automate multi-step research while preserving review.</p>
-        <div class="mini refined-mini stepped-agentic-visual" aria-label="Five-step agentic workflow from query to verified output">
-  <svg class="stepped-agent-svg" viewBox="0 0 560 250" preserveAspectRatio="none" aria-hidden="true">
-    <path class="step-link black-link" d="M82 125 H162"/>
-    <path class="step-link black-link" d="M210 125 H290"/>
-    <path class="step-link black-link" d="M338 125 H418"/>
-    <path class="step-link purple-link" d="M466 125 H520"/>
+        <div class="mini refined-mini final-agentic-flow" aria-label="Five-step connected agentic workflow">
+  <svg class="final-agentic-lines" viewBox="0 0 1000 240" preserveAspectRatio="none" aria-hidden="true">
+    <path class="agent-line agent-line-black" d="M160 120 H240"/>
+    <path class="agent-line agent-line-black" d="M360 120 H440"/>
+    <path class="agent-line agent-line-black" d="M560 120 H640"/>
+    <path class="agent-line agent-line-purple" d="M760 120 H840"/>
+    <circle class="agent-junction black-junction" cx="240" cy="120" r="5"/>
+    <circle class="agent-junction black-junction" cx="440" cy="120" r="5"/>
+    <circle class="agent-junction black-junction" cx="640" cy="120" r="5"/>
+    <circle class="agent-junction purple-junction" cx="840" cy="120" r="5"/>
   </svg>
-
-  <div class="stepped-node step-one-node">
-    <b>1</b>
-    <span>Query</span>
-  </div>
-
-  <div class="stepped-node step-two-node">
-    <b>2</b>
-    <span>Retrieve evidence</span>
-  </div>
-
-  <div class="stepped-node step-three-node">
-    <b>3</b>
-    <span>Compare analogues</span>
-  </div>
-
-  <div class="stepped-node step-four-node">
-    <b>4</b>
-    <span>Human validation</span>
-  </div>
-
-  <div class="stepped-node verified-step-node">
-    <b>✓</b>
-    <span>Verified output</span>
-  </div>
+  <div class="final-agent-node final-query"><b>1</b><span>Query</span></div>
+  <div class="final-agent-node final-retrieve"><b>2</b><span>Retrieve evidence</span></div>
+  <div class="final-agent-node final-compare"><b>3</b><span>Compare analogues</span></div>
+  <div class="final-agent-node final-human"><b>4</b><span>Human validation</span></div>
+  <div class="final-agent-node final-verified"><b>✓</b><span>Verified output</span></div>
 </div>
 </article>
 
@@ -1753,7 +1914,7 @@ Yellow remains a restrained verification signal only. -->
           <div class="vault-doc vault-doc-xls"><b>XLSX</b><span>Pricing model</span></div>
           <div class="vault-doc vault-doc-ppt"><b>PPT</b><span>Value narrative</span></div>
           <div class="vault-safe">
-            <div class="vault-ring"></div>
+            
             <img src="assets/cellbyte-mark-white.png" alt="">
             <small>Secure merge</small>
           </div>
@@ -2031,6 +2192,9 @@ Yellow remains a restrained verification signal only. -->
 <section id="security" style="background:var(--soft)"><div class="shell"><div class="head"><div class="kicker">Security certifications</div><h2>Built for enterprise pharmaceutical intelligence.</h2><p>Security and compliance designed for critical launch decisions.</p></div><div class="secgrid"><article class="seccard"><h3>GDPR</h3><p class="support">Operating under the European Union’s data-protection framework, with the technical team based in Germany.</p><span class="status">Regulatory framework</span></article><article class="seccard"><h3>ISO 27001</h3><p class="support">Certified to the international standard for information-security management systems.</p><span class="status cert">Certified</span></article><article class="seccard"><h3>SOC 2 Type 2</h3><p class="support">Working toward SOC 2 Type 2 assurance for secure and compliant data management.</p><span class="status">Audit in progress</span></article></div></div></section>
 <section id="closing" class="closing"><div class="shell"><div class="kicker">Ready to move?</div><h2>Ready to unlock Pricing and Market Access intelligence?</h2><p>Reclaim your time with Cellbyte. Focus on what truly matters.</p><a class="btn primary" style="margin-top:20px" href="mailto:hello@cellbyte.com">Book a demo</a></div></section>
 </main>
-<footer id="about"><div class="shell foot"><div><div class="brand"><span class="mark"></span>Cellbyte</div><p class="support">Accelerate Global Drug Launches</p></div><div><h4>Platform</h4><a href="#platform">Drug Explorer</a><a href="#platform">Document Intelligence</a><a href="#platform">Agentic Workflows</a><a href="#platform">Data Vault</a></div><div><h4>Security</h4><a href="#security">Overview</a><a href="#security">GDPR</a><a href="#security">ISO 27001</a><a href="#security">SOC 2</a></div><div id="careers"><h4>Company</h4><a href="#">Careers</a><a href="#">Newsroom</a><a href="#">LinkedIn</a><a href="#about">About</a></div><div><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Imprint</a><a href="#">Terms</a></div></div></footer>
+<footer id="about"><div class="shell foot"><div class="footer-brand-block">
+  <img class="footer-wordmark" src="assets/cellbyte-wordmark-black.png" alt="Cellbyte">
+  <p class="support">Accelerate Global Drug Launches</p>
+</div><div><h4>Platform</h4><a href="#platform">Drug Explorer</a><a href="#platform">Document Intelligence</a><a href="#platform">Agentic Workflows</a><a href="#platform">Data Vault</a></div><div><h4>Security</h4><a href="#security">Overview</a><a href="#security">GDPR</a><a href="#security">ISO 27001</a><a href="#security">SOC 2</a></div><div id="careers"><h4>Company</h4><a href="#">Careers</a><a href="#">Newsroom</a><a href="#">LinkedIn</a><a href="#about">About</a></div><div><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Imprint</a><a href="#">Terms</a></div></div></footer>
 
 </body></html>
